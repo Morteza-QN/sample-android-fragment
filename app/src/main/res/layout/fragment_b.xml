@@ -2,7 +2,8 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrand_primary">
 
 
     <TextView
@@ -10,17 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/lable_a"
+        android:text="@string/lable_b"
         android:textColor="@android:color/black"
         android:textSize="42sp" />
-
-    <Button
-        android:id="@+id/btn_fragmentA_gotoB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:text="@string/goto_fragment_b" />
 
 
 </FrameLayout>

@@ -3,4 +3,6 @@
     <string name="hello_myfragment">Hello, this is MyFragment</string>
     <string name="lable_a">A</string>
     <string name="remove_transaction_btn">Remove Transaction</string>
+    <string name="lable_b">B</string>
+    <string name="goto_fragment_b">Goto Fragment B</string>
 </resources>
