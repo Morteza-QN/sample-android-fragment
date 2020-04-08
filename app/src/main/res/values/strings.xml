@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sample Anroid Fragment</string>
+    <string name="hello_myfragment">Hello, this is MyFragment</string>
 </resources>
