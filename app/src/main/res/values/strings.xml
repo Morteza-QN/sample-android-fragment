@@ -5,4 +5,5 @@
     <string name="remove_transaction_btn">Remove Transaction</string>
     <string name="lable_b">B</string>
     <string name="goto_fragment_b">Goto Fragment B</string>
+    <string name="fragment_c">Fragment C</string>
 </resources>
