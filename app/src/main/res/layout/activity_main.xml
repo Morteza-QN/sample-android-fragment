@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,11 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.sampleanroidfragment.MyFragment"
+
+    <Button
+
+        android:background="@drawable/backgrand_primary"
+        android:layout_alignParentBottom="true"
+        android:text="@string/remove_transaction_btn"
+        android:id="@+id/btn_main_remove_transaction"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="330dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_above="@id/btn_main_remove_transaction"
+        android:id="@+id/frame_main_fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+</RelativeLayout>

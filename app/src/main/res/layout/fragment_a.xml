@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
 
-        android:id="@+id/tv_myFragment"
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tv_fragment_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/hello_myfragment"
+        android:text="@string/lable_a"
         android:textColor="@android:color/black"
-        android:textSize="26sp"
-        />
+        android:textSize="42sp" />
+
+
 </FrameLayout>
