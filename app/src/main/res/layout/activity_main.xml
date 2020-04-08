@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <Button
-
-        android:background="@drawable/backgrand_primary"
-        android:layout_alignParentBottom="true"
-        android:text="@string/remove_transaction_btn"
         android:id="@+id/btn_main_remove_transaction"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/backgrand_primary"
+        android:text="@string/remove_transaction_btn" />
 
     <FrameLayout
-        android:layout_above="@id/btn_main_remove_transaction"
         android:id="@+id/frame_main_fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_main_remove_transaction" />
 
 
 </RelativeLayout>

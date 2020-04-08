@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.frame_main_fragmentContainer, new FragmentA());
         fragmentTransaction.addToBackStack("FRAGMENT_A");
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 if (fragment != null) {
                     FragmentTransaction removeTransaction = getSupportFragmentManager().beginTransaction();
                     removeTransaction.remove(fragment);
+                    removeTransaction.addToBackStack(null);
+                    Log.i(TAG, "onClick: removeTransactionBtn addToBackStack");
                     removeTransaction.commit();
                 }
             }
