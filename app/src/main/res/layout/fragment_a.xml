@@ -5,22 +5,23 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/tv_fragment_a"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_fragmentA_input"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/lable_a"
-        android:textColor="@android:color/black"
-        android:textSize="42sp" />
+        android:layout_gravity="center_vertical"
+        android:layout_margin="12dp"
+        android:background="@android:color/white"
+        android:hint="@string/hint_input"
+        android:textSize="24sp" />
 
     <Button
-        android:id="@+id/btn_fragmentA_gotoB"
+        android:id="@+id/btn_fragmentA_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:text="@string/goto_fragment_b" />
-
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/backgrond_primary"
+        android:text="@string/done" />
 
 </FrameLayout>

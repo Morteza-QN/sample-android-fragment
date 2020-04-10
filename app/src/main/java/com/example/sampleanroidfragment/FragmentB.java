@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,7 +14,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentB extends Fragment {
-    private static final String TAG = "FragmentB";
+    public static final  String EXTRA_KEY_DATA = "et_input";
+    private static final String TAG            = "FragmentB";
+
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -34,14 +37,31 @@ public class FragmentB extends Fragment {
         return inflater.inflate(R.layout.fragment_b, container, false);
     }
 
+    public static FragmentB newInstance(String data) {
+        Bundle args = new Bundle();
+        args.putString(EXTRA_KEY_DATA, data);
+        FragmentB fragment = new FragmentB();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.i(TAG, "onViewCreated: ");
 
-        FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
+        TextView textView = view.findViewById(R.id.tv_fragment_b);
+        if (getArguments() != null) {
+            String data = getArguments().getString(EXTRA_KEY_DATA);
+            textView.setText(data);
+        }
+
+
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.frame_b_fragmentContainer, new FragmentC());
         fragmentTransaction.commit();
     }
+
 
     @Override
     public void onStart() {

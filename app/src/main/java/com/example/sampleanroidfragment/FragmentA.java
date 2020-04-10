@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,10 +37,27 @@ public class FragmentA extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button goToBBtn = view.findViewById(R.id.btn_fragmentA_gotoB);
-        goToBBtn.setOnClickListener(new View.OnClickListener() {
+        Button doneBtn = view.findViewById(R.id.btn_fragmentA_done);
+        doneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText editText = view.findViewById(R.id.et_fragmentA_input);
+                String   data     = editText.getText().toString().trim();
+
+
+                Log.i(TAG, "onClick: onViewCreated");
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame_main_fragmentContainer, FragmentB.newInstance(data));
+                fragmentTransaction.addToBackStack(null);
+                Log.i(TAG, "onClick: addToBackStack");
+                fragmentTransaction.commit();
+            }
+        });
+
+
+        /*goToBBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "onClick: onViewCreated");
@@ -50,7 +68,7 @@ public class FragmentA extends Fragment {
                 Log.i(TAG, "onClick: addToBackStack");
                 fragmentTransaction.commit();
             }
-        });
+        });*/
     }
 
     @Override

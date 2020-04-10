@@ -6,4 +6,6 @@
     <string name="lable_b">B</string>
     <string name="goto_fragment_b">Goto Fragment B</string>
     <string name="fragment_c">Fragment C</string>
+    <string name="hint_input">Enter anything</string>
+    <string name="done">Done</string>
 </resources>
